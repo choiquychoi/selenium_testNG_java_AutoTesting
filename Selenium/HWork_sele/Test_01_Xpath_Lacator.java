@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Test_B1_Xpath_Lacator {
+public class Test_01_Xpath_Lacator {
     // 1- SetUp: OS/browser/ web/ Page/ Data
     WebDriver driver;
 

@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Topic_00_template {
-    // 1- SetUp: OS/browser/ web/ Page/ Data
     WebDriver driver;
 
     @BeforeClass
@@ -19,7 +18,6 @@ public class Topic_00_template {
         driver.get("https://demo.nopcommerce.com");
     }
 
-    // 2- Action/ Execute: web Element/ nhập liệu /verify/...
     @Test
     public void TC_01(){
 
@@ -30,7 +28,6 @@ public class Topic_00_template {
 
     }
 
-    // 3- clean: Delete data/ close browser
     @AfterClass
     public void cleanBrowser(){
         driver.quit();
