@@ -62,6 +62,18 @@ public class Topic_04_WebBrowser_exer_II {
 
     @Test
     public void Login_04_incorrrect_email_pass(){
+        driver.get("http://live.techpanda.org/");
+
+        driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+
+        driver.findElement(By.cssSelector("input#email")).sendKeys("congquynguyen1349@gmail.com");
+
+        driver.findElement(By.cssSelector("input#pass")).sendKeys("123123123");
+
+        driver.findElement(By.cssSelector("button#send2")).click();
+
+        Assert.assertEquals(driver.findElement(By.cssSelector("li.error-msg span")).getText(),"Invalid login or password.");
+
 
     }
 
