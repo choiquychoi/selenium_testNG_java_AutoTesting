@@ -14,8 +14,7 @@ public class Topic_00_template {
     @BeforeClass
     public void beforeCLass() {
         driver = new FirefoxDriver();
-
-        driver.get("https://demo.nopcommerce.com");
+        driver.manage().window().maximize();
     }
 
     @Test
