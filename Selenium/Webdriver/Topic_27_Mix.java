@@ -10,11 +10,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import javax.xml.crypto.Data;
 import java.time.Duration;
 import java.util.Date;
 
-public class Topic_26_Mix {
+public class Topic_27_Mix {
     WebDriver driver;
     WebDriverWait explicitWait;
 
@@ -31,6 +30,12 @@ public class Topic_26_Mix {
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         driver.get("http://live.techpanda.org/index.php/customer/account/login/");
+
+        // wait  and explicit
+        explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input#email")));
+
+        // wait vs implicit
+        driver.findElement(By.cssSelector("input#email"));
     }
 
     @Test
