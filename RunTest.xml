@@ -2,16 +2,26 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Suite1" verbose="1">
-    <test name="Regression">
-        <groups>
-            <run>
-                <include name="regression"/>
-            </run>
-        </groups>
-
-        <packages>
-            <package name="payment"></package>
-            <package name="testng"></package>
-        </packages>
+    <parameter name="server" value="Dev"/>
+    
+    <test name="Run on Chrome">
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="testng.Topic_03_multiple_browser"/>
+        </classes>
+    </test>
+    
+    <test name="Run on Edge">
+        <parameter name="browser" value="Edge"></parameter>
+        <classes>
+            <class name="testng.Topic_03_multiple_browser"></class>
+        </classes>
+    </test>
+    
+    <test name="Run on FireFox">
+        <parameter name="browser" value="Firefox"></parameter>
+        <classes>
+            <class name="testng.Topic_03_multiple_browser"></class>
+        </classes>
     </test>
 </suite>
